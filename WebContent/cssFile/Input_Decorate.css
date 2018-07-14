@@ -1,0 +1,38 @@
+@chaset "UTF-8";
+.item {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.re_item{
+	position: absolute;
+	top: 38%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cc {
+	width: 350px;
+	height: 40px;
+	background: none;
+	border-color: white;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	outline: none;
+	padding-left: 10px;
+}
+
+body {
+	font-family: KaiTi;
+}
+
+input::-webkit-input-placeholder {
+	color: #888;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #B0C4DE inset;
+}

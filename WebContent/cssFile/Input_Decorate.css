@@ -1,4 +1,4 @@
-@chaset "UTF-8";
+@chaset "UTF-8 ";
 .item {
 	position: absolute;
 	top: 30%;
@@ -6,7 +6,7 @@
 	transform: translate(-50%, -50%);
 }
 
-.re_item{
+.re_item {
 	position: absolute;
 	top: 38%;
 	left: 50%;

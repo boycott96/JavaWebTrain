@@ -53,7 +53,7 @@ public class Log_In extends HttpServlet {
 			int result = ud.getUser(userName,password);
 			System.out.println(result);
 			if(result>0) {
-				
+				response.sendRedirect("home_page.jsp");
 			}
 		}
 		

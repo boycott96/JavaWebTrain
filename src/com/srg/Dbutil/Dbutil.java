@@ -71,7 +71,6 @@ public class Dbutil {
 					rowData.put(md.getColumnName(i), rs.getObject(i));
 				}
 				list.add(rowData);
-				System.out.println("list:"+list.toString());
 			}	
 			
 		} catch (SQLException e) {
@@ -83,7 +82,7 @@ public class Dbutil {
 		
 	}
 
-	private static void bindParams(PreparedStatement ps, List<Object> sqlParams) {
+	public static void bindParams(PreparedStatement ps, List<Object> sqlParams) {
 		for (int i = 0; i < sqlParams.size(); i++) {
 			try {
 				ps.setObject(i + 1, sqlParams.get(i));

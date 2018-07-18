@@ -13,13 +13,13 @@
 	<div style='display: inline;'>
 		<div style='float: left; width: 50%'>
 			<ul>
-				<li><a style="color: red;" href="log_in.jsp">My Music</a></li>
+				<li><a style="color: red;" href="sign_in.jsp">My Music</a></li>
 			</ul>
 		</div>
 		<div style='float: right; width: 50%; text-align: right'>
 			<ul>
-				<li><a href="log_in.jsp">Sin In</a>&nbsp; OR &nbsp;<a
-					href="register.jsp">Sin Up</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+				<li><a href="sign_in.jsp">Sign In</a>&nbsp; OR &nbsp;<a
+					href="sign_up.jsp">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
 			</ul>
 		</div>
 	</div>

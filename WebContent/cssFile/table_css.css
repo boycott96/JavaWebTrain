@@ -1,0 +1,29 @@
+@charset "UTF-8";
+table {
+	width: 70%;
+	table-layout: fixed;
+}
+
+table tbody {
+	display: inline-block;
+	width: 100%; 
+	height : 800px;
+	overflow-y: scroll;
+	height: 800px;
+}
+
+th {
+	padding: 20px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	color: red;
+}
+
+td {
+	padding: 15px;
+	vertical-align: middle;
+	font-weight: 300;
+	font-size: 16px;
+	color: white;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}

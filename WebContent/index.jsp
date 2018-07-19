@@ -28,7 +28,7 @@
 		<img src="files/icon.png">
 		<p>
 		<p>
-			<embed style='color: red' src="files/music.flac" autoplay="true">
+			<embed style='color: red' src="files/music.mp3" autoplay="true">
 	</div>
 	<div
 		style="color: white; float: left; text-align: center; width: 600px">

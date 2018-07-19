@@ -12,4 +12,8 @@ public interface MusicDao {
 	public List<Music> getMusic(String music_name);
 	
 	public List<Music> getMusic();
+	
+	public Music getMusic(int music_id);
+
+	public int updateMusic(Music music);
 }

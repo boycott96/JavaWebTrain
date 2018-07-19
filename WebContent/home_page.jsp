@@ -64,7 +64,8 @@
 					<td>${music.music_time }</td>
 					<td><a style="color: #66FF00"
 						href="http://music.163.com/song/media/outer/url?id=${music.music_address }.mp3">Play</a>&nbsp;
-						<a style="color: #CC00FF;"
+						<a style="color: #FFCC00;" href="editMusic?music_id=${music.music_id }">Alt</a>&nbsp; <a
+						style="color: #CC00FF;"
 						href="deleteMusic?music_id=${music.music_id }"
 						onclick="if(confirm('Are You Sure Delete')==false) return false;">Del</a></td>
 				</tr>

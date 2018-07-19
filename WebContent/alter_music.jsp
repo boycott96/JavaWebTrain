@@ -9,7 +9,7 @@
 <link rel='stylesheet' type="text/css" href='cssFile/Main_css.css'>
 <link rel='stylesheet' type="text/css"
 	href='cssFile/Sign_In_Decorate.css'>
-<title>Add-Music</title>
+<title>Alter-Music</title>
 </head>
 <body style="background: black">
 
@@ -33,22 +33,35 @@
 	</div>
 	<div align="center">
 		<br> <br> <br>
-		<form action="addMusic">
-			<input class="cc" style="color: white;" autocomplete="off"
-				type="text" name="music_name" placeholder="Input Music Name"><br>
-			<input class="cc" style="color: white;" autocomplete="off"
-				type="text" name="music_author" placeholder="Input Music Author"><br>
-			<input class="cc" style="color: white;" autocomplete="off"
-				type="text" name="music_address"
-				placeholder="Input Music Web Address"><br>
-			<br>
-			<br> <input class="register_button" type="submit"
-				value="Add Enter"><br><br><br>
+		<form action="alterMusic">
+			<input type="hidden" name="music_id" value="${music.music_id }">
+			<font color="white">Music Name:</font><input class="cc"
+				style="color: white;" autocomplete="off" type="text"
+				name="music_name" value="${music.music_name }"><br> <font
+				color="white">Music Auth:</font><input class="cc"
+				style="color: white;" autocomplete="off" type="text"
+				name="music_author" value="${music.music_author }"><br>
+			<font color="white">Music Time:</font><input class="cc"
+				style="color: white;" autocomplete="off" type="text"
+				name="music_time" value="${music.music_time }"><br> <font
+				color="white">Music Addr:</font><input class="cc"
+				style="color: white;" autocomplete="off" type="text"
+				name="music_address"
+				value="http://music.163.com/m/song?id=${music.music_address }&userid=287187886"><br>
+			<br> <br> <input class="register_button" type="submit"
+				value="Alter Enter"><br> <br> <br>
 		</form>
 		<div style="color: red;">
-			<p>Music Name: <font color="white">IF You Feel My Love(Chaow Mix)</font></p>
-			<p>Music Author: <font color="white">Blaxy Girls</font></p>
-			<p>Music Wbe Address: <font color="white">http://music.163.com/m/song?id=16714264&userid=287187886</font></p>
+			<p>
+				Music Name: <font color="white">IF You Feel My Love(Chaow
+					Mix)</font>
+			</p>
+			<p>
+				Music Author: <font color="white">Blaxy Girls</font>
+			</p>
+			<p>
+				Music Wbe Address: <font color="white">http://music.163.com/m/song?id=16714264&userid=287187886</font>
+			</p>
 		</div>
 	</div>
 </body>

@@ -24,7 +24,7 @@
 			<font style="font-size: 20px;"><img
 				style="height: 30px; width: 30px;"
 				src="files/userPhotos/${user.head_Icon_Address }" /> ${user.name }
-				&nbsp;&nbsp;</font> <a href="index.jsp">Log Out</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;</font> <a href="sign_Out">Log Out</a>&nbsp;&nbsp;&nbsp;&nbsp;
 		</div>
 	</div>
 	<hr style="background-color: red; border-color: red" />

@@ -39,7 +39,7 @@
 				style="height: 30px; width: 30px; border: none;"
 				src="files/userPhotos/${user.head_Icon_Address }"
 				onclick="javascrtpt:window.location.href='head_icon.jsp'" />&nbsp;&nbsp;
-				${user.name } &nbsp;&nbsp;</font> <a href="index.jsp">Log Out</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				${user.name } &nbsp;&nbsp;</font> <a href="sign_Out">Log Out</a>&nbsp;&nbsp;&nbsp;&nbsp;
 		</div>
 	</div>
 	<hr style="background-color: red; border-color: red" />

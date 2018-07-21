@@ -7,12 +7,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel='stylesheet' type='text/css' href='cssFile/Input_Decorate.css'>
 <link rel='stylesheet' type="text/css" href='cssFile/Main_css.css'>
+<link rel='stylesheet' type="text/css" href='cssFile/table_css.css'>
 <link rel='stylesheet' type="text/css" href='cssFile/Sign_In_Decorate.css'>
+<link rel="stylesheet" href="cssFile/APlayer.min.css">
 <link rel='stylesheet' type="text/css" href='cssFile/slide.css'>
-<title>Head-Icon</title>
+
+<script src="js/Meting.min.js"></script>
+<script src="js/APlayer.min.js"></script>
+<title>Listening-Charts</title>
 </head>
 <body style="background: black">
-<nav>
+
+	<nav>
 	<ul class="main">
 		<li><a class="ahref" href="index.html">Home</a>
 		<li><a class="ahref" href="music_list.jsp">List Music</a></li>
@@ -20,25 +26,29 @@
 		<li><a class="ahref" href="#">about</a>
 			<ul class="drop menu6">
 				<li><a class="ahref" href="team.html">Team</a></li>
-				<li><a class="ahref" href="https://github.com/huaisun/JavaWebTrain"></a>Code</li>news</a></li>
+				<li><a class="ahref" href="https://github.com/huaisun/JavaWebTrain"></a>Code</li>
 			</ul></li>
 		<li><a class="ahref" href="head_icon.jsp">Name: ${user.name }</a></li>
 	</ul>
 	</nav>
-	<div class="div">
-		&nbsp;&nbsp;&nbsp;&nbsp;<img src="files/icon.png">
-	</div>
-	<div>
-		<br> <br> <br>
+	<div style="width: 100%; float: left;">
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<th width="5%">Order</th>
+				<th width="20%">Name</th>
+				<th width="10%">Author</th>
+				<th width="10%">Times</th>
+			</tr>
 
-		<form style="color: white;" action="addHeadIcon" method="post"
-			enctype="multipart/form-data">
-			<img style="height: 70px; width: 70px;"
-				src="files/userPhotos/${user.head_Icon_Address }" /> <font
-				style="color: white;">Select the avatar you want to convert
-				--></font> <input type="file" name="head_icon"> <input
-				type="submit" value="Enter">
-		</form>
+			<c:forEach var="music" items="${musicList }" varStatus="vs">
+				<tr align="center">
+					<td>${vs.count }</td>
+					<td style="color: #FFFF00;">${music.music_name }</td>
+					<td style="color: #7FFFD4;">${music.music_author }</td>
+					<td style="color: red;">${music.music_time }</td>
+				</tr>
+			</c:forEach>
+		</table>
 	</div>
 </body>
 </html>

@@ -9,10 +9,10 @@
 <link rel='stylesheet' type="text/css" href='cssFile/Main_css.css'>
 <link rel='stylesheet' type="text/css" href='cssFile/Sign_In_Decorate.css'>
 <link rel='stylesheet' type="text/css" href='cssFile/slide.css'>
-<title>Head-Icon</title>
+<title>Music-List</title>
 </head>
 <body style="background: black">
-<nav>
+	<nav>
 	<ul class="main">
 		<li><a class="ahref" href="index.html">Home</a>
 		<li><a class="ahref" href="music_list.jsp">List Music</a></li>
@@ -20,25 +20,30 @@
 		<li><a class="ahref" href="#">about</a>
 			<ul class="drop menu6">
 				<li><a class="ahref" href="team.html">Team</a></li>
-				<li><a class="ahref" href="https://github.com/huaisun/JavaWebTrain"></a>Code</li>news</a></li>
+				<li><a class="ahref" href="https://github.com/huaisun/JavaWebTrain"></a>Code</li>
 			</ul></li>
 		<li><a class="ahref" href="head_icon.jsp">Name: ${user.name }</a></li>
 	</ul>
 	</nav>
-	<div class="div">
-		&nbsp;&nbsp;&nbsp;&nbsp;<img src="files/icon.png">
-	</div>
+	<font color="white">&nbsp;&nbsp;&nbsp;&nbsp;List
+		Music&nbsp;&nbsp;&nbsp;&nbsp;Star: 9999 times</font>
+	<br>
 	<div>
-		<br> <br> <br>
-
-		<form style="color: white;" action="addHeadIcon" method="post"
-			enctype="multipart/form-data">
-			<img style="height: 70px; width: 70px;"
-				src="files/userPhotos/${user.head_Icon_Address }" /> <font
-				style="color: white;">Select the avatar you want to convert
-				--></font> <input type="file" name="head_icon"> <input
-				type="submit" value="Enter">
-		</form>
+		<table>
+			<tr>
+				<th width="200px;" height="180px;"><a href="listeningCharts"><img
+						width="150px;" alt="" src="files/one.jpg"></a></th>
+				<th width="200px;" height="180px;"><a href="musicManage"><img
+						width="150px;" alt=""
+						src="files/userPhotos/${user.head_Icon_Address }"></a></th>
+			</tr>
+			<tr>
+				<td width="200px;" align="center"><font color="white">Listening
+						charts</font></td>
+				<td width="200px;" align="center"><font color="white">My
+						favorite song list</font></td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>

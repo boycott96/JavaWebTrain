@@ -28,7 +28,7 @@
 				</div>
 				<div style='float: left'>
 					<input class='cancel_button' type='button' value="CANCEL"
-						onclick="javascrtpt:window.location.href='index.jsp'">
+						onclick="javascrtpt:window.location.href='index.html'">
 				</div>
 			</div>
 		</form>

@@ -7,27 +7,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel='stylesheet' type='text/css' href='cssFile/Input_Decorate.css'>
 <link rel='stylesheet' type="text/css" href='cssFile/Main_css.css'>
-<link rel='stylesheet' type="text/css"
-	href='cssFile/Sign_In_Decorate.css'>
+<link rel='stylesheet' type="text/css" href='cssFile/Sign_In_Decorate.css'>
+<link rel='stylesheet' type="text/css" href='cssFile/slide.css'>
 <title>Add-Music</title>
 </head>
 <body style="background: black">
-
-	<div style='display: inline;'>
-		<div style='float: left; width: 50%; height: 50px;'>
-			<ul>
-				<li><a style="color: red;" href="musicManage">My Music</a></li>
-			</ul>
-		</div>
-		<div
-			style='float: right; width: 50%; text-align: right; color: red; height: 50px; font-weight: bold;'>
-			<font style="font-size: 20px;"><img
-				style="height: 30px; width: 30px;"
-				src="files/userPhotos/${user.head_Icon_Address }" /> ${user.name }
-				&nbsp;&nbsp;</font> <a href="sign_Out">Log Out</a>&nbsp;&nbsp;&nbsp;&nbsp;
-		</div>
-	</div>
-	<hr style="background-color: red; border-color: red" />
+	<nav>
+	<ul class="main">
+		<li><a class="ahref" href="index.html">Home</a>
+		<li><a class="ahref" href="music_list.jsp">List Music</a></li>
+		<li><a class="ahref" href="sign_Out">Sign Out</a></li>
+		<li><a class="ahref" href="#">about</a>
+			<ul class="drop menu6">
+				<li><a class="ahref" href="team.html">Team</a></li>
+				<li><a class="ahref" href="https://github.com/huaisun/JavaWebTrain"></a>Code</li>
+			</ul></li>
+		<li><a class="ahref" href="head_icon.jsp">Name: ${user.name }</a></li>
+	</ul>
+	</nav>
 	<div class="div">
 		&nbsp;&nbsp;&nbsp;&nbsp;<img src="files/icon.png">
 	</div>

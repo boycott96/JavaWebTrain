@@ -6,7 +6,8 @@ public class Music {
 	private int music_time;
 	private int music_id;
 	private String music_address;
-
+	private int unumber_id;
+	
 	public Music() {
 		super();
 	}
@@ -51,10 +52,20 @@ public class Music {
 		this.music_address = music_address;
 	}
 
+	public int getUnumber_id() {
+		return unumber_id;
+	}
+
+	public void setUnumber_id(int unumber_id) {
+		this.unumber_id = unumber_id;
+	}
+
 	@Override
 	public String toString() {
 		return "Music [music_name=" + music_name + ", music_author=" + music_author + ", music_time=" + music_time
-				+ ", music_id=" + music_id + ", music_address=" + music_address + "]";
+				+ ", music_id=" + music_id + ", music_address=" + music_address + ", unumber_id=" + unumber_id + "]";
 	}
+
+	
 
 }

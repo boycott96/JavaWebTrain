@@ -40,7 +40,7 @@ public class Sign_Out extends HttpServlet {
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		session.invalidate();
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("index.html");
 	}
 
 }

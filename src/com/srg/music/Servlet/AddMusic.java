@@ -7,10 +7,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.srg.music.dao.MusicDao;
 import com.srg.music.dao.impl.MusicDaoImpl;
 import com.srg.music.entity.Music;
+import com.srg.user.entity.Users;
 
 /**
  * Servlet implementation class AddServlet
@@ -41,6 +43,8 @@ public class AddMusic extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		Users user = (Users) session.getAttribute("user");
 		String music_name = request.getParameter("music_name");
 		String music_author = request.getParameter("music_author");
 		String music_web_address = request.getParameter("music_address");
@@ -53,6 +57,7 @@ public class AddMusic extends HttpServlet {
 		music.setMusic_author(music_author);
 		music.setMusic_time(0);
 		music.setMusic_address(music_address);
+		music.setUnumber_id(user.getId());
 
 		MusicDao musicDao = new MusicDaoImpl();
 		int result = musicDao.insertMusic(music);

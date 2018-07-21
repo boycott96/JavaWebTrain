@@ -15,29 +15,39 @@ public class MusicDaoImpl implements MusicDao {
 
 	@Override
 	public int insertMusic(Music music) {
-		String sql = "insert into music(music_name,music_author,music_time,music_address) values(?,?,?,?)";
+		String sql = "insert into music(music_name,music_author,music_time,music_address,unumber_id) values(?,?,?,?,?)";
 		List<Object> sqlParams = new ArrayList<>();
 		sqlParams.add(music.getMusic_name());
 		sqlParams.add(music.getMusic_author());
 		sqlParams.add(music.getMusic_time());
 		sqlParams.add(music.getMusic_address());
+		sqlParams.add(music.getUnumber_id());
 		int result = Dbutil.executeUpdate(sql, sqlParams);
 		return result;
 	}
 
 	@Override
-	public List<Music> getMusic() {
-		String sql = "select * from music order by music_time desc";
+	public List<Music> getMusicList(int user_id, int flag) {
+		StringBuilder sb = new StringBuilder("select * from music where unumber_id=? order by ");
+		if (flag == 1)
+			sb.append("music_name");
+		else {
+			sb.append("music_time desc");
+		}
+		String sql = sb.toString();
+		List<Object> sqlParams = new ArrayList<>();
+		sqlParams.add(user_id);
 		@SuppressWarnings("unchecked")
-		List<Music> music = Dbutil.executeQuery(sql, null);
+		List<Music> music = Dbutil.executeQuery(sql, sqlParams);
 		return music;
 	}
 
 	@Override
-	public List<Music> getMusic(String music_name) {
-		String sql = "select * from music where music_name like ?";
+	public List<Music> getMusic(String music_name,int unumber_id) {
+		String sql = "select * from music where music_name like ? and unumber_id=? order by music_name";
 		List<Object> sqlParams = new ArrayList<>();
 		sqlParams.add(music_name);
+		sqlParams.add(unumber_id);
 		@SuppressWarnings("unchecked")
 		List<Music> music = Dbutil.executeQuery(sql, sqlParams);
 		return music;

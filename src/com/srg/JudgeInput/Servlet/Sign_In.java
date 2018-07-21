@@ -44,9 +44,9 @@ public class Sign_In extends HttpServlet {
 			throws ServletException, IOException {
 		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
-		if (userName == "" || userName.equals(null)) {
+		if (userName == "" || userName == null || userName.equals(null)) {
 			response.sendRedirect("popUpWeb/userNull.html");
-		} else if (password == "" || password.equals(null)) {
+		} else if (password == "" || password == null || password.equals(null)) {
 			response.sendRedirect("popUpWeb/passwordNull.html");
 		} else {
 			System.out.println(userName + " " + password);
@@ -55,7 +55,7 @@ public class Sign_In extends HttpServlet {
 			if (user.getId() > 0) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);
-				request.getRequestDispatcher("musicManage").forward(request, response);
+				request.getRequestDispatcher("music_list.jsp").forward(request, response);
 
 			} else {
 				response.sendRedirect("popUpWeb/passwordNull.html");
